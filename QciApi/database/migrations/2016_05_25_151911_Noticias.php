@@ -21,9 +21,9 @@ class Noticias extends Migration
             $table->integer('vistas');
             $table->string('ubicacion')->nullable();
             $table->integer('idautor')->nullable();
-            $table->integer('idCentroUniversitario')->unsigned();
+            $table->integer('centrouniversitario_id')->unsigned();
 
-            $table->foreign('idCentroUniversitario')->references('id')->on('centros_universitarios');
+            $table->foreign('centrouniversitario_id')->references('id')->on('centros_universitarios');
             $table->timestamps();
         });
     }

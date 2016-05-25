@@ -14,13 +14,13 @@ class ComentariosProfesores extends Migration
     {
         Schema::create('comentarios_profesores', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProfesorMateria')->unsigned();
+            $table->integer('profesormateria_id')->unsigned();
             $table->mediumText('comentario');
-            $table->integer('idUsuario')->unsigned();
+            $table->integer('usuario_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('idProfesorMateria')->references('id')->on('profesor_materia');
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
+            $table->foreign('profesormateria_id')->references('id')->on('profesor_materia');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
     }
 

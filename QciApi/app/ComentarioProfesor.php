@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class ComentarioProfesor extends Model
 {
 	
-	protected $fillable = ['idProfesorMateria','comentario','idUsuario'];
+	protected $fillable = ['profesormateria_id','comentario','usuario_id'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
-	protected $table = 'comentarios_profesor';
+	protected $table = 'comentarios_profesores';
 
 	public function profesorMateria()
 	{

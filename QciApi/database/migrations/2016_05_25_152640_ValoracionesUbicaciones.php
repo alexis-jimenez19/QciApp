@@ -14,13 +14,13 @@ class ValoracionesUbicaciones extends Migration
     {
         Schema::create('valoraciones_ubicaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUsuario')->unsigned();
-            $table->integer('idUbicacion')->unsigned();
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('ubicacion_id')->unsigned();
             $table->string('valoracion');
             $table->timestamps();
 
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idUbicacion')->references('id')->on('ubicaciones');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones');
         });
     }
 

@@ -16,12 +16,12 @@ class Ubicaciones extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('foto');
-            $table->integer('idCentroUniversitario')->unsigned();
-            $table->integer('idTipoUbicacion')->unsigned();
+            $table->integer('centrouniversitario_id')->unsigned();
+            $table->integer('tipoubicacion_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('idCentroUniversitario')->references('id')->on('centros_universitarios');
-            $table->foreign('idTipoUbicacion')->references('id')->on('tipos_ubicaciones');
+            $table->foreign('centrouniversitario_id')->references('id')->on('centros_universitarios');
+            $table->foreign('tipoubicacion_id')->references('id')->on('tipos_ubicaciones');
         });
     }
 

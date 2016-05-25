@@ -14,13 +14,13 @@ class ComentariosProyectos extends Migration
     {
         Schema::create('comentarios_proyectos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProyecto')->unsigned();
-            $table->integer('idUsuario')->unsigned();
+            $table->integer('proyecto_id')->unsigned();
+            $table->integer('usuario_id')->unsigned();
             $table->string('comentario');
             $table->timestamps();
             
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idProyecto')->references('id')->on('proyectos');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('proyecto_id')->references('id')->on('proyectos');
         });
     }
 

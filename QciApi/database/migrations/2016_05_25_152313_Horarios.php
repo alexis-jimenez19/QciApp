@@ -14,19 +14,19 @@ class Horarios extends Migration
     {
         Schema::create('horarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUsuario')->unsigned();
-            $table->integer('idCalendario')->unsigned();
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('calendario_id')->unsigned();
             $table->string('materia');
             $table->string('inicialesMateria');
             $table->string('profesor');
             $table->time('horaInicio');
             $table->time('horaFin');
             $table->string('edificioSalon');
-            $table->integer('calificacion')->nullable();
+            $table->integer('calificacion')->default('100');
             $table->timestamps();
 
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idCalendario')->references('id')->on('calendarios');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('calendario_id')->references('id')->on('calendarios');
         });
     }
 

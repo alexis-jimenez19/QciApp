@@ -14,12 +14,12 @@ class ValoracionesProfesores extends Migration
     {
         Schema::create('valoraciones_profesores', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUsuario')->unsigned();
-            $table->integer('idProfesorMateria')->unsigned();
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('profesormateria_id')->unsigned();
             $table->integer('valoracion');
 
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idProfesorMateria')->references('id')->on('profesor_materia');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('profesormateria_id')->references('id')->on('profesor_materia');
             $table->timestamps();
         });
     }

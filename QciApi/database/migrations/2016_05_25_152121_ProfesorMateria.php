@@ -14,10 +14,10 @@ class ProfesorMateria extends Migration
     {
         Schema::create('profesor_materia', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProfesor')->unsigned();
+            $table->integer('profesor_id')->unsigned();
             $table->string('materia');
 
-            $table->foreign('idProfesor')->references('id')->on('profesores');
+            $table->foreign('profesor_id')->references('id')->on('profesores');
             $table->timestamps();
         });
     }

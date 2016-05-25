@@ -14,13 +14,13 @@ class ComentariosProductos extends Migration
     {
         Schema::create('comentarios_productos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUsuario')->unsigned();
-            $table->integer('idProducto')->unsigned();
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
             $table->string('comentario');
             $table->timestamps();
 
-            $table->foreign('idProducto')->references('id')->on('productos');
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
+            $table->foreign('producto_id')->references('id')->on('productos');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
     }
 

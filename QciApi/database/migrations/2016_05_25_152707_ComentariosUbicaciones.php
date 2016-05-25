@@ -14,13 +14,13 @@ class ComentariosUbicaciones extends Migration
     {
         Schema::create('comentarios_ubicaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUbicacion')->unsigned();
-            $table->integer('idUsuario')->unsigned();
+            $table->integer('ubicacion_id')->unsigned();
+            $table->integer('usuario_id')->unsigned();
             $table->string('comentario');
             $table->timestamps();
 
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idUbicacion')->references('id')->on('ubicaciones');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones');
         });
     }
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
 	
-	protected $fillable = ['nombreU','correoU','passwordU','idCentroUniversitario'];
+	protected $fillable = ['nombreU','correoU','passwordU','centrouniversitario_id'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
@@ -36,6 +36,11 @@ class Usuario extends Model
 	public function comentariosProductos()
 	{
 		return $this->hasMany('App\ComentarioProducto');
+	}
+	
+	public function productos()
+	{
+		return $this->hasMany('App\Producto');
 	}
 
 	public function proyectos()

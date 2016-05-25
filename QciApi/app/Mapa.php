@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Mapa extends Model
 {
 	
-	protected $fillable = ['imagen','idCentroUniversitario'];
+	protected $fillable = ['imagen','centrouniversitario_id'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
-	protected $table = 'comentarios_ubicaciones';
+	protected $table = 'mapas';
 
 	public function centroUniversitario()
 	{

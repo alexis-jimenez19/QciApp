@@ -14,17 +14,18 @@ class Perfiles extends Migration
     {
         Schema::create('perfiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUsuario')->unsigned();
+            $table->integer('usuario_id')->unsigned();
+            $table->string('nombreCompleto')->nullable();
             $table->string('foto')->nullable();
             $table->date('fechaNacimiento')->nullable();
             $table->string('semestre')->nullable();
-            $table->integer('idCarrera')->unsigned();
+            $table->integer('carrera_id')->unsigned();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('googleplus')->nullable();
 
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
-            $table->foreign('idCarrera')->references('id')->on('carreras');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('carrera_id')->references('id')->on('carreras');
             $table->timestamps();
         });
     }

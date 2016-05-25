@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ComentarioProducto extends Model
 {
 	
-	protected $fillable = ['idUsuario','idProducto','comentario'];
+	protected $fillable = ['usuario_id','producto_id','comentario'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

@@ -14,11 +14,11 @@ class FotosProductos extends Migration
     {
         Schema::create('fotos_productos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProducto')->unsigned();
+            $table->integer('producto_id')->unsigned();
             $table->string('foto');
             $table->timestamps();
 
-            $table->foreign('idProducto')->references('id')->on('productos');
+            $table->foreign('producto_id')->references('id')->on('productos');
 
         });
     }

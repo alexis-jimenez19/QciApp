@@ -18,9 +18,9 @@ class Usuarios extends Migration
             $table->string('correoU');
             $table->string('passwordU');
             $table->unique(['nombreU','correoU']);
-            $table->integer('idCentroUniversitario')->unsigned();
+            $table->integer('centrouniversitario_id')->unsigned();
             
-            $table->foreign('idCentroUniversitario')->references('id')->on('centros_universitarios');
+            $table->foreign('centrouniversitario_id')->references('id')->on('centros_universitarios');
             $table->timestamps();
         });
     }
