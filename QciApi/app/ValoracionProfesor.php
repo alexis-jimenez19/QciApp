@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ValoracionProfesor extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['idUsuario','idProfesorMateria','valoracion'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

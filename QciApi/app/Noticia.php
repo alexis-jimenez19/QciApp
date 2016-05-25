@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Noticia extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['titulo','fecha','descripcion','imagen','vistas','ubicacion','idautor','idCentroUniversitario'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

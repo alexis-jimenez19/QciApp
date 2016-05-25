@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Calendario extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['ciclo'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

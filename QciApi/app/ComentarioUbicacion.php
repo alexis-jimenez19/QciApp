@@ -4,14 +4,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
 * 
 */
-class Profesor extends Model
+class ComentarioUbicacion extends Model
 {
 	
-	protected $fillable = ['foto','nombre','division','correo','ubicacionOficina','idCentroUniversitario'];
+	protected $fillable = ['idUbicacion','idUsuario','comentario'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
-	protected $table = 'profesores';
+	protected $table = 'comentarios_ubicaciones';
 
 }
 /*

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class FotoProducto extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['idProducto','foto'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

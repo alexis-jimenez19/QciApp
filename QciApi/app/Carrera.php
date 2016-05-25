@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Carrera extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['nombre'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	

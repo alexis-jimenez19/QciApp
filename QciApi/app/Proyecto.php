@@ -4,14 +4,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
 * 
 */
-class Profesor extends Model
+class Proyecto extends Model
 {
 	
-	protected $fillable = ['foto','nombre','division','correo','ubicacionOficina','idCentroUniversitario'];
+	protected $fillable = ['nombre','nombreEquipo','descripcion','idUsuarioLider','idCentroUniversitario'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
-	protected $table = 'profesores';
+	protected $table = 'proyectos';
 
 }
 /*

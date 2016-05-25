@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Perfil extends Model
 {
 	
-	protected $fillable = [''];
+	protected $fillable = ['foto','fechaNacimiento','semestre','idCarrera','facebook','twitter','googleplus'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
