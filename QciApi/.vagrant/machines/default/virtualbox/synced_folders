@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/qciapi":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/qciapi","hostpath":"D:/UDGSmstrs/6Smstr/SIS1/ProyQci/QCiAppAndApi/QciApi","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/UDGSmstrs/6Smstr/SIS1/ProyQci/QCiAppAndApi/QciApi","disabled":false,"__vagrantfile":true}}}
