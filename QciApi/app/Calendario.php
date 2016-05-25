@@ -13,6 +13,10 @@ class Calendario extends Model
 	
 	protected $table = 'calendarios';
 
+	public function horarios()
+	{
+		return $this->hasMany('App\Horario');
+	}
 }
 /*
 	public function ()

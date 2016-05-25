@@ -13,6 +13,16 @@ class ComentarioProyecto extends Model
 	
 	protected $table = 'comentarios_proyectos';
 
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
+	public function proyecto()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
 }
 /*
 	public function ()

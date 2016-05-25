@@ -13,6 +13,11 @@ class Noticia extends Model
 	
 	protected $table = 'noticias';
 
+	public function centroUniversitario()
+	{
+		return $this->belongsTo('App\CentroUniversitario');
+	}
+
 }
 /*
 	public function ()

@@ -12,7 +12,11 @@ class Carrera extends Model
 	protected $hidden = ['id','created_at','updated_at'];
 	
 	protected $table = 'carreras';
-
+	
+	public function perfiles()
+	{
+		return $this->hasMany('App\Perfil');
+	}
 }
 /*
 	public function ()

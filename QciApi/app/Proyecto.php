@@ -13,6 +13,16 @@ class Proyecto extends Model
 	
 	protected $table = 'proyectos';
 
+	public function centroUniversitario()
+	{
+		return $this->belongsTo('App\CentroUniversitario');
+	}
+
+	public function integrantes()
+	{
+		return $this->hasMany('App\IntegranteProyecto');
+	}
+
 }
 /*
 	public function ()

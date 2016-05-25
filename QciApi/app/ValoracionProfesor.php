@@ -13,6 +13,16 @@ class ValoracionProfesor extends Model
 	
 	protected $table = 'valoraciones_profesores';
 
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
+	public function profesorMateria()
+	{
+		return $this->belongsTo('App\ProfesorMateria');
+	}
+
 }
 /*
 	public function ()

@@ -13,6 +13,25 @@ class Ubicacion extends Model
 	
 	protected $table = 'ubicaciones';
 
+	public function centroUniversitario()
+	{
+		return $this->belongsTo('App\CentroUniversitario');
+	}
+
+	public function tipoUbicacion()
+	{
+		return $this->belongsTo('App\TipoUbicacion');
+	}
+
+	public function valoraciones()
+	{
+		return $this->hasMany('App\ValoracionUbicacion');
+	}
+
+	public function comentarios()
+	{
+		return $this->hasMany('App\ComentarioUbicacion');
+	}
 }
 /*
 	public function ()

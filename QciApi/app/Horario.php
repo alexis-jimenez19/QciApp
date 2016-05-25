@@ -13,6 +13,16 @@ class Horario extends Model
 	
 	protected $table = 'horarios';
 
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
+	public function calendario()
+	{
+		return $this->belongsTo('App\Calendario');
+	}
+
 }
 /*
 	public function ()

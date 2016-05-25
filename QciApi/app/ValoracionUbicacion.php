@@ -13,6 +13,15 @@ class ValoracionUbicacion extends Model
 	
 	protected $table = 'valoraciones_ubicaciones';
 
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
+	public function ubicacion()
+	{
+		return $this->belongsTo('App\Ubicacion');
+	}
 }
 /*
 	public function ()

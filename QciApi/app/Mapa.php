@@ -4,18 +4,18 @@ use Illuminate\Database\Eloquent\Model;
 /**
 * 
 */
-class TipoUbicacion extends Model
+class Mapa extends Model
 {
 	
-	protected $fillable = ['nombre'];
+	protected $fillable = ['imagen','idCentroUniversitario'];
 	
 	protected $hidden = ['id','created_at','updated_at'];
 	
-	protected $table = 'tipos_ubicaciones';
+	protected $table = 'comentarios_ubicaciones';
 
-	public function ubicaciones()
+	public function centroUniversitario()
 	{
-		return $this->hasMany('App\Ubicacion');
+		return $this->belongsTo('App\centroUniversitario');
 	}
 
 }

@@ -13,6 +13,16 @@ class ComentarioProfesor extends Model
 	
 	protected $table = 'comentarios_profesor';
 
+	public function profesorMateria()
+	{
+		return $this->belongsTo('App\Profesor');
+	}
+
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
 }
 /*
 	public function ()

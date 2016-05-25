@@ -13,6 +13,16 @@ class ComentarioUbicacion extends Model
 	
 	protected $table = 'comentarios_ubicaciones';
 
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
+
+	public function ubicacion()
+	{
+		return $this->belongsTo('App\Ubicacion');
+	}
+
 }
 /*
 	public function ()

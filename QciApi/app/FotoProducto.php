@@ -13,6 +13,11 @@ class FotoProducto extends Model
 	
 	protected $table = 'fotos_productos';
 
+	public function producto()
+	{
+		return $this->belongsTo('App\Producto');
+	}
+
 }
 /*
 	public function ()

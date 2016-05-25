@@ -12,7 +12,16 @@ class IntegranteProyecto extends Model
 	protected $hidden = ['id','created_at','updated_at'];
 	
 	protected $table = 'integrantes_proyectos';
+	
+	public function usuario()
+	{
+		return $this->belongsTo('App\Usuario');
+	}
 
+	public function proyecto()
+	{
+		return $this->belongsTo('App\Proyecto');
+	}
 }
 /*
 	public function ()

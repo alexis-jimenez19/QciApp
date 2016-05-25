@@ -13,6 +13,21 @@ class ProfesorMateria extends Model
 	
 	protected $table = 'profesor_materia';
 
+	public function profesor()
+	{
+		return $this->belongsTo('App\Profesor');
+	}
+
+	public function valoracionesProfesores()
+	{
+		return $this->hasMany('App\ValoracionProfesor');
+	}
+
+	public function comentarios()
+	{
+		return $this->hasMany('App\ComentarioProyecto');
+	}
+
 }
 /*
 	public function ()

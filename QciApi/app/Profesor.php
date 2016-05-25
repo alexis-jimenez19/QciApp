@@ -13,6 +13,16 @@ class Profesor extends Model
 	
 	protected $table = 'profesores';
 
+	public function centroUniversitario()
+	{
+		return $this->belongsTo('App\CentroUniversitario');
+	}
+
+	public function profesorMateria()
+	{
+		return $this->hasMany('App\ProfesorMateria');
+	}
+
 }
 /*
 	public function ()
