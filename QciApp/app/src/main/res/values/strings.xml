@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QciApp</string>
+    <string name="app_name">UDG App</string>
 
     <string name="user_name_label">Nickname</string>
     <string name="user_name_value">[Nickname]</string>
