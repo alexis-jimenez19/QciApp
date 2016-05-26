@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Proyecto extends Model
 {
 	
-	protected $fillable = ['nombre','nombreEquipo','descripcion','usuario_id','centrouniversitario_id'];
+	protected $fillable = ['id','nombre','nombreEquipo','descripcion','usuario_id','centro_universitario_id'];
 	//usuario_idRecordemos que este el usuario Lider
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'proyectos';
 

@@ -8,7 +8,7 @@ class Controller extends BaseController
     {
     	return response()->json(['data'=>$datos],$codigo);
     }
-    
+
     public function crearRespuestaError($mensaje,$codigo)
     {
     	return response()->json(['menssage'=>$mensaje,'code'=>$codigo],$codigo);
@@ -19,3 +19,41 @@ class Controller extends BaseController
     	return $this->crearRespuestaError($errors,422);
     }
 }
+/*
+<?php namespace App\Http\Controllers;
+use App\ ;
+use Illuminate\Http\Request;
+class CentroController extends Controller
+{
+    public function index()
+    {
+    }
+    
+    public function show($id)
+	{
+	}
+	
+    public function store(Request $request) 
+    {
+    }
+    
+    public function update(Request $request, $_id)
+    {
+    }
+
+	public function destroy($_id)
+    {
+    }
+
+    public function validacion(Request $request)
+    {
+        $reglas = 
+        [
+            '' => 'required',
+         
+        ];
+
+        $this->validate($request, $reglas);
+    }
+}
+*/

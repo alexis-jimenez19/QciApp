@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class TipoUbicacion extends Model
 {
 	
-	protected $fillable = ['nombre'];
+	protected $fillable = ['id','nombre'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'tipos_ubicaciones';
 

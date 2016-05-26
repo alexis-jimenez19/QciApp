@@ -19,9 +19,9 @@ class Profesores extends Migration
             $table->string('division');
             $table->string('correo')->nullable();
             $table->string('ubicacionOficina')->nullable();
-            $table->integer('centrouniversitario_id')->unsigned();
+            $table->integer('centro_universitario_id')->unsigned();
             
-            $table->foreign('centrouniversitario_id')->references('id')->on('centros_universitarios');
+            $table->foreign('centro_universitario_id')->references('id')->on('centros_universitarios');
             $table->timestamps();
         });
     }

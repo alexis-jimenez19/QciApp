@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Horario extends Model
 {
 	
-	protected $fillable = ['usuario_id','calendario_id','materia','inicialesMateria','profesor','horaInicio','horaFin','edificioSalon','calificacion'];
+	protected $fillable = ['id','usuario_id','calendario_id','materia','inicialesMateria','profesor','horaInicio','horaFin','edificioSalon','calificacion'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'horarios';
 

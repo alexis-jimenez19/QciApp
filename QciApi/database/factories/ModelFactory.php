@@ -30,7 +30,7 @@ $factory->define(App\Usuario::class, function ($faker) {
         'nombreU'               => $faker->unique()->userName,
         'correoU'               => $faker->unique()->email,
         'passwordU'             => $faker->password,     
-        'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),
+        'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),
     ];
 });
 
@@ -42,7 +42,7 @@ $factory->define(App\Noticia::class, function ($faker) {
         'imagen'                => $faker->imageUrl($width = 640, $height = 480), 
         'ubicacion'             => $faker->address, 
         'idautor'               => $faker->numberBetween($min = 1, $max = 30), 
-        'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),     
+        'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),     
     ];
 });
 
@@ -70,7 +70,7 @@ $factory->define(App\Profesor::class, function ($faker) {
         'division'              => $faker->word,
         'correo'                => $faker->companyEmail,
         'ubicacionOficina'      => $faker->regexify('[A-Z][1-40]'),
-        'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),     
+        'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),     
     ];
 });
 
@@ -149,7 +149,7 @@ $factory->define(App\Proyecto::class, function ($faker) {
         'nombreEquipo'          => $faker->sentence($nbWords = 1, $variableNbWords = true),     
         'descripcion'           => $faker->realText($faker->numberBetween(50,300)),
         'usuario_id'        => $faker->numberBetween($min = 1, $max = 30),     
-        'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),     
+        'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),     
 
     ];
 });
@@ -183,7 +183,7 @@ $factory->define(App\Ubicacion::class, function ($faker) {
     return [
         'nombre'                => $faker->company,     
         'foto'                  => $faker->imageUrl($width = 640, $height = 480,'business'),    
-        'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),     
+        'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),     
         'tipoubicacion_id'       => $faker->numberBetween($min = 1, $max = 5),     
     ];
 });
@@ -207,7 +207,7 @@ $factory->define(App\ComentarioUbicacion::class, function ($faker) {
 $factory->define(App\Mapa::class, function ($faker) {
     return [
         'imagen'                => $faker->imageUrl($width = 640, $height = 480,'city'),    
-        'centrouniversitario_id' => $faker->unique()->numberBetween($min = 1, $max = 5),     
-        //'centrouniversitario_id' => $faker->numberBetween($min = 1, $max = 5),     
+        'centro_universitario_id' => $faker->unique()->numberBetween($min = 1, $max = 5),     
+        //'centro_universitario_id' => $faker->numberBetween($min = 1, $max = 5),     
     ];
 });

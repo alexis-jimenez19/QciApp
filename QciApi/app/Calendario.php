@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Calendario extends Model
 {
 	
-	protected $fillable = ['ciclo'];
+	protected $fillable = ['id','ciclo'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'calendarios';
 

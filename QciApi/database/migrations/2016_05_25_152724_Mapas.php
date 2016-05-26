@@ -15,9 +15,9 @@ class Mapas extends Migration
         Schema::create('mapas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('imagen');
-            $table->integer('centrouniversitario_id')->unsigned();
+            $table->integer('centro_universitario_id')->unsigned();
             $table->timestamps();
-            $table->foreign('centrouniversitario_id')->references('id')->on('centros_universitarios');
+            $table->foreign('centro_universitario_id')->references('id')->on('centros_universitarios');
         });
     }
 

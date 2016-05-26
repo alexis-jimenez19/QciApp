@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Perfil extends Model
 {
 	
-	protected $fillable = ['usuario_id','nombreCompleto','foto','fechaNacimiento','semestre','carrera_id','facebook','twitter','googleplus'];
+	protected $fillable = ['id','usuario_id','nombreCompleto','foto','fechaNacimiento','semestre','carrera_id','facebook','twitter','googleplus'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'perfiles';
 	

@@ -18,11 +18,11 @@ class Proyectos extends Migration
             $table->string('nombreEquipo');
             $table->string('descripcion');
             $table->integer('usuario_id')->unsigned();
-            $table->integer('centroUniversitario_id')->unsigned();
+            $table->integer('centro_universitario_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('usuario_id')->references('id')->on('usuarios');
-            $table->foreign('centroUniversitario_id')->references('id')->on('centros_universitarios');
+            $table->foreign('centro_universitario_id')->references('id')->on('centros_universitarios');
 
         });
     }

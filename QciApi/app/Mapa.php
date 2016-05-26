@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Mapa extends Model
 {
 	
-	protected $fillable = ['imagen','centrouniversitario_id'];
+	protected $fillable = ['id','imagen','centro_universitario_id'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'mapas';
 

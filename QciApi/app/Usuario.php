@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
 	
-	protected $fillable = ['nombreU','correoU','passwordU','centrouniversitario_id'];
+	protected $fillable = ['id','nombreU','correoU','passwordU','centro_universitario_id'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'usuarios';
 

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Profesor extends Model
 {
 	
-	protected $fillable = ['foto','nombre','division','correo','ubicacionOficina','centrouniversitario_id'];
+	protected $fillable = ['id','foto','nombre','division','correo','ubicacionOficina','centro_universitario_id'];
 	
-	protected $hidden = ['id','created_at','updated_at'];
+	protected $hidden = ['created_at','updated_at'];
 	
 	protected $table = 'profesores';
 
